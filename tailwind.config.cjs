@@ -8,7 +8,8 @@ const config = {
 				darkGreen: '#33443C'
 			},
 			fontFamily: {
-				quicksand: ['Quicksand', 'sans-serif']
+				quicksand: ['Quicksand', 'sans-serif'],
+				playfair: ['Playfair Display', 'serif']
 			}
 		}
 	},
