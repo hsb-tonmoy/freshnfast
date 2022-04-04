@@ -21,7 +21,7 @@
 
 <style lang="postcss">
 	.menu-item {
-		@apply uppercase bg-lightGreen hover:bg-darkGreen text-white px-6 py-4 font-medium text-base transition-all ease-in-out duration-200;
+		@apply uppercase bg-lightGreen hover:bg-darkGreen text-white px-6 py-4 font-medium text-base transition-all ease-in-out duration-500;
 	}
 
 	.menu-icons {
