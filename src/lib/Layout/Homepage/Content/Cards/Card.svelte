@@ -5,10 +5,13 @@
 </script>
 
 <div class="card max-w-sm bg-white rounded-xl">
-	<a href="#">
-		<img class="rounded-t-lg rounded-b-lg h-auto" src={img_url} alt={title} />
-	</a>
-	<div class="p-5 h-32">
+	<div
+		class="rounded-xl h-[500px] bg-cover bg-center bg-no-repeat"
+		style={`background-image: url(${img_url})`}
+	>
+		<span />
+	</div>
+	<div class="p-5">
 		<a href="#">
 			<h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 ">{title}</h5>
 		</a>

@@ -1,14 +1,22 @@
 <script>
 	import Hero from '$lib/Layout/Homepage/Hero.svelte';
-	import SectionTemplate from '$lib/Layout/Homepage/SectionTemplate.svelte';
+	import WhiteSectionTemplate from '$lib/Layout/Homepage/WhiteSectionTemplate.svelte';
+	import BackgroundSectionTemplate from '$lib/Layout/Homepage/BackgroundSectionTemplate.svelte';
 	import Bowls from '$lib/Layout/Homepage/Content/Bowls.svelte';
+	import Discount from '$lib/Layout/Homepage/Content/Banner/Discount.svelte';
 </script>
 
 <main class="flex flex-col">
 	<Hero />
-	<SectionTemplate heading="Our Bowls">
+	<WhiteSectionTemplate heading="Our Bowls">
 		<Bowls />
-	</SectionTemplate>
+	</WhiteSectionTemplate>
+	<Discount />
+	<div class="mt-40">
+		<BackgroundSectionTemplate heading="Our Smoothies">
+			<Bowls />
+		</BackgroundSectionTemplate>
+	</div>
 </main>
 
 <svelte:head>

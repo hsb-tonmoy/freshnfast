@@ -1,9 +1,7 @@
 <section class="hero">
 	<section class="bg-overlay" />
 	<div class="flex flex-col items-center z-10">
-		<h1
-			class="animate__animated animate__backInDown text-white text-9xl font-playfair font-black z-50"
-		>
+		<h1 class="animate__animated animate__backInDown text-white text-9xl font-playfair font-black">
 			Fresh N' Fast
 		</h1>
 		<h3
