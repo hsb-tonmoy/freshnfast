@@ -4,9 +4,9 @@
 	export let description = '';
 </script>
 
-<div class="card max-w-sm bg-white rounded-xl">
+<div class="card max-w-xs lg:max-w-sm bg-white rounded-xl">
 	<div
-		class="rounded-xl h-[500px] bg-cover bg-center bg-no-repeat"
+		class="rounded-xl h-[450px] lg:h-[500px] bg-cover bg-center bg-no-repeat"
 		style={`background-image: url(${img_url})`}
 	>
 		<span />

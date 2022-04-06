@@ -4,6 +4,7 @@
 	import BackgroundSectionTemplate from '$lib/Layout/Homepage/BackgroundSectionTemplate.svelte';
 	import Bowls from '$lib/Layout/Homepage/Content/Bowls.svelte';
 	import Discount from '$lib/Layout/Homepage/Content/Banner/Discount.svelte';
+	import Smoothies from '$lib/Layout/Homepage/Content/Smoothies.svelte';
 </script>
 
 <main class="flex flex-col">
@@ -14,7 +15,7 @@
 	<Discount />
 	<div class="mt-40">
 		<BackgroundSectionTemplate heading="Our Smoothies">
-			<Bowls />
+			<Smoothies />
 		</BackgroundSectionTemplate>
 	</div>
 </main>

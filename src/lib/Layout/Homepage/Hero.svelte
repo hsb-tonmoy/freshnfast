@@ -1,11 +1,13 @@
 <section class="hero">
 	<section class="bg-overlay" />
 	<div class="flex flex-col items-center z-10">
-		<h1 class="animate__animated animate__backInDown text-white text-9xl font-playfair font-black">
+		<h1
+			class="animate__animated animate__backInDown text-white text-6xl md:text-8xl lg:text-9xl font-playfair font-black"
+		>
 			Fresh N' Fast
 		</h1>
 		<h3
-			class="animate__animated animate__slideInUp text-3xl text-center font-playfair font-medium text-white/90 mt-4"
+			class="animate__animated animate__slideInUp text-xl md:text-3xl text-center font-playfair font-medium text-white/90 mt-4"
 		>
 			Making Choices Healthier
 		</h3>
