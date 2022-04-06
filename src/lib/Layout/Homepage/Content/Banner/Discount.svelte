@@ -18,7 +18,7 @@
 			/>
 		</div>
 		<div class="w-full lg:w-3/5 h-full">
-			<div class="flex flex-col w-full md:h-5/6 justify-center px-4 md:px-12 pt-6 md:py-0">
+			<div class="flex flex-col w-full md:h-5/6 justify-center px-4 md:px-12 lg:px-40 pt-6 md:py-0">
 				<h2
 					class="text-2xl md:text-3xl lg:text-5xl font-bold font-sans tracking-tight text-gray-900"
 				>
