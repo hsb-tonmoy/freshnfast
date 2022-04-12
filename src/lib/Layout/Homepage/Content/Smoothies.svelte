@@ -30,7 +30,7 @@
 	];
 </script>
 
-<div class="w-full flex flex-wrap justify-center gap-x-8 gap-y-8 lg:gap-y-0 px-4 lg:px-12">
+<div class="w-full flex flex-wrap justify-center gap-8 px-4 lg:px-12">
 	{#each smoothies as smoothie}
 		<Card title={smoothie.title} img_url={smoothie.img_url} description={smoothie.description} />
 	{/each}
