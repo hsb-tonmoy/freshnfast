@@ -1,4 +1,5 @@
 <script>
+	import { cart_count } from '$lib/Cart/stores';
 	import { shopping_bag } from '$lib/svg/header';
 	let y;
 
@@ -26,7 +27,7 @@
 		<a href="/">
 			<img
 				class={`transition-all ease-in-out duration-500 ${
-					header_scrolling ? 'w-20 h-20' : 'w-32 h-32 md:w-40 md:h-40 lg:w-52 lg:h-52'
+					header_scrolling ? 'w-14 h-14 my-4' : 'w-16 h-16 md:w-20 md:h-20 lg:w-32 lg:h-32 mt-8'
 				}`}
 				src="/images/logo.png"
 				alt="FreshNFast"
@@ -50,7 +51,7 @@
 				>
 				<span
 					class="absolute rounded-full bg-darkGreen w-5 h-5 -top-1 -right-1 text-white text-xs leading-tight text-center"
-					>5
+					>{$cart_count}
 				</span>
 			</div>
 		</button>
