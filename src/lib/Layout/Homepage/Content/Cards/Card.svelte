@@ -1,51 +1,52 @@
 <script>
-	export let title = '';
-	export let img_url = '';
-	export let description = '';
+	import { toast } from '@zerodevx/svelte-toast';
+	import { cart_items } from '$lib/Cart/stores';
+	import ItemModal from '$lib/Layout/Modal/ItemModal.svelte';
+
+	export let item;
+
+	let modalHidden = true;
+
+	// function handleClick() {
+	// 	$cart_items = [...$cart_items, item];
+
+	// 	toast.push('Added to your order!', {
+	// 		theme: {
+	// 			'--toastBackground': '#48BB78',
+	// 			'--toastBarBackground': '#2F855A'
+	// 		}
+	// 	});
+	// }
+
+	function handleClick() {
+		modalHidden = !modalHidden;
+	}
 </script>
+
+<ItemModal {item} bind:hidden={modalHidden} />
 
 <div class="card group max-w-xs lg:max-w-sm bg-white rounded-xl">
 	<div
 		class="relative rounded-xl h-[450px] lg:h-[500px] bg-cover bg-center bg-no-repeat"
-		style={`background-image: url(${img_url})`}
+		style={`background-image: url(${item.img_url})`}
 	>
 		<span />
 		<div
-			class="absolute flex items-center justify-center w-full h-full opacity-0 group-hover:opacity-100 bg-black/50 transition-all ease-in-out duration-200"
+			class="absolute flex items-center justify-center w-full h-full rounded-xl opacity-0 group-hover:opacity-100 bg-black/50 transition-all ease-in-out duration-200"
 		>
 			<button
-				class="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-sm hover:text-white group hover:bg-gray-50"
+				on:click={handleClick}
+				class="bg-white/90 hover:bg-white text-darkGreen uppercase text-sm px-6 py-4 shadow"
+				>Add to Order</button
 			>
-				<span
-					class="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"
-				/>
-				<span
-					class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease"
-				>
-					<svg
-						class="w-5 h-5"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-						><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M14 5l7 7m0 0l-7 7m7-7H3"
-						/></svg
-					>
-				</span>
-				<span class="relative">Button Text</span>
-			</button>
 		</div>
 	</div>
 	<div class="p-5">
 		<a href="#">
-			<h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 ">{title}</h5>
+			<h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 ">{item.title}</h5>
 		</a>
 		<p class="mb-3 font-normal text-sm text-gray-700 ">
-			{description}
+			{item.description}
 		</p>
 	</div>
 </div>
