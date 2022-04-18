@@ -36,9 +36,9 @@
 	</div>
 	<nav class="animate__animated animate__slideInRight hidden md:flex items-center gap-x-4">
 		<a class={menu_item_class} href="/">Home</a>
-		<a class={menu_item_class} href="/">Menu</a>
-		<a class={menu_item_class} href="/">About Us</a>
-		<a class={menu_item_class} href="/">Contact Us</a>
+		<a class={menu_item_class} href="/menu">Menu</a>
+		<a class={menu_item_class} href="/about">About Us</a>
+		<a class={menu_item_class} href="/contact">Contact Us</a>
 		<button
 			class="block lg:inline-block lg:mt-0 lg:ml-6 align-middle text-black hover:text-gray-700"
 		>
