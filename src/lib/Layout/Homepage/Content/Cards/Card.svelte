@@ -1,28 +1,18 @@
 <script>
-	import { cart_items } from '$lib/Cart/stores';
 	import ItemModal from '$lib/Layout/Modal/ItemModal.svelte';
 
 	export let item;
 
 	let modalHidden = true;
 
-	// function handleClick() {
-	// 	$cart_items = [...$cart_items, item];
-
-	// 	toast.push('Added to your order!', {
-	// 		theme: {
-	// 			'--toastBackground': '#48BB78',
-	// 			'--toastBarBackground': '#2F855A'
-	// 		}
-	// 	});
-	// }
-
 	function handleClick() {
 		modalHidden = !modalHidden;
 	}
 </script>
 
-<ItemModal {item} bind:hidden={modalHidden} />
+{#if !modalHidden}
+	<ItemModal {item} bind:hidden={modalHidden} />
+{/if}
 
 <div class="card group max-w-xs lg:max-w-sm bg-white rounded-xl">
 	<div
@@ -36,7 +26,7 @@
 			<button
 				on:click={handleClick}
 				class="bg-white/90 hover:bg-white text-darkGreen uppercase text-sm px-6 py-4 shadow"
-				>Add to Order</button
+				>View Details</button
 			>
 		</div>
 	</div>
