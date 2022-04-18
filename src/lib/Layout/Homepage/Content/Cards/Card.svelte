@@ -1,5 +1,4 @@
 <script>
-	import { toast } from '@zerodevx/svelte-toast';
 	import { cart_items } from '$lib/Cart/stores';
 	import ItemModal from '$lib/Layout/Modal/ItemModal.svelte';
 
