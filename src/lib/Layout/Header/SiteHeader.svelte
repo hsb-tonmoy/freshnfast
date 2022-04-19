@@ -1,6 +1,8 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { cart_count } from '$lib/Cart/stores';
 	import { shopping_bag } from '$lib/svg/header';
+
 	let y;
 
 	let header_scrolling = false;
@@ -42,7 +44,7 @@
 		<button
 			class="block lg:inline-block lg:mt-0 lg:ml-6 align-middle text-black hover:text-gray-700"
 		>
-			<div class="relative flex items-center justify-center">
+			<div on:click={() => goto('/order/cart')} class="relative flex items-center justify-center">
 				<span
 					class={`block w-8 h-8 ${
 						header_scrolling ? 'text-darkGreen stroke-1' : 'text-white'
