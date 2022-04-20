@@ -9,6 +9,10 @@
 
 	$: calories = $cart_items.reduce((acc, item) => acc + parseInt(item.calories) * item.quantity, 0);
 	$: total = $cart_items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+	const clearCart = () => {
+		$cart_items = [];
+	};
 </script>
 
 <section class="h-screen shadow-md bg-white px-16 py-20 z-[999999]">
@@ -35,7 +39,16 @@
 	</div>
 	{#if !isCheckout}
 		<div class=" orders py-10 border-b-2 border-dashed border-gray-300">
-			<span class="font-playfair text-3xl font-semibold">Your Orders</span>
+			<div class="flex justify-between items-center">
+				<span class="font-playfair text-3xl font-semibold">Your Orders</span>
+				<span on:click={clearCart} class="w-6 h-6 cursor-pointer"
+					><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+						><path d="M0 0h24v24H0V0z" fill="none" /><path
+							d="M5 13h14v-2H5v2zm-2 4h14v-2H3v2zM7 7v2h14V7H7z"
+						/></svg
+					></span
+				>
+			</div>
 			<hr class="h-[5px] w-[18%] bg-lightGreen mt-2 mb-12" />
 			<div class="items flex flex-col gap-y-8 overflow-y-scroll">
 				{#if $cart_items.length > 0}
