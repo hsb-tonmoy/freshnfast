@@ -19,7 +19,6 @@
 	import Discount from '$lib/Layout/Homepage/Content/Banner/Discount.svelte';
 	import Smoothies from '$lib/Layout/Homepage/Content/Smoothies.svelte';
 	import Shots from '$lib/Layout/Homepage/Content/Shots.svelte';
-	import Maps from '$lib/Layout/Homepage/Maps.svelte';
 
 	export let bowls;
 	export let smoothies;
@@ -44,11 +43,6 @@
 	<div class="">
 		<WhiteSectionTemplate heading="Elixir Shots">
 			<Shots {shots} />
-		</WhiteSectionTemplate>
-	</div>
-	<div class="">
-		<WhiteSectionTemplate>
-			<Maps />
 		</WhiteSectionTemplate>
 	</div>
 </main>
