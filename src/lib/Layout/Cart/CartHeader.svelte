@@ -1,4 +1,4 @@
-<header class="flex justify-between items-center w-full px-16 py-4">
+<header class="flex justify-between items-center w-full py-4">
 	<div id="logo" class="animate__animated animate__rotateInDownLeft">
 		<a href="/">
 			<img
@@ -9,7 +9,7 @@
 		</a>
 	</div>
 	<nav
-		class="animate__animated animate__slideInRight hidden md:flex items-center gap-x-8 font-medium text-sm text-darkGreen hover:text-lightGreen"
+		class="animate__animated animate__slideInRight hidden md:flex items-center gap-x-8 font-medium text-base text-darkGreen hover:text-lightGreen"
 	>
 		<a href="/">Home</a>
 		<a href="/menu">Menu</a>

@@ -6,16 +6,14 @@
 	export let item = {};
 
 	function handleClick() {
-		$cart_items = [...$cart_items, item];
-
-		hidden = true;
-
-		toast.push('Added to your order!', {
-			theme: {
-				'--toastBackground': '#48BB78',
-				'--toastBarBackground': '#2F855A'
+		for (let prod of $cart_items) {
+			if (prod.title === item.title) {
+				prod.quantity += 1;
+				$cart_items = $cart_items;
 			}
-		});
+			return;
+		}
+		$cart_items = [...$cart_items, item];
 	}
 </script>
 

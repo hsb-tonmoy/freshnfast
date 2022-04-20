@@ -4,6 +4,7 @@ const shots = [
 		img_url: '/images/shot1.jpg',
 		price: '9.99',
 		calories: '450',
+		quantity: 1,
 		description:
 			'Romaine lettuce, shredded parmesan, tomatoes and roasted chicken tossed with our caesar dressing.',
 		nutrients: [
@@ -46,6 +47,7 @@ const shots = [
 		img_url: '/images/shot2.jpg',
 		price: '9.99',
 		calories: '450',
+		quantity: 1,
 		description:
 			'Baby spinach, grilled shrimp, tangerine slices, carrots, cranberries, slivered almonds and crispy wontons tossed with our asian vinaigrette.',
 		nutrients: [
@@ -88,6 +90,7 @@ const shots = [
 		img_url: '/images/shot3.jpg',
 		price: '9.99',
 		calories: '450',
+		quantity: 1,
 		description:
 			'lemon oregano chicken, rice, tomatoes, cucumber, olives, feta cheese, red onion, fresh herbs, and finished with tzatziki sauce.',
 		nutrients: [
@@ -130,6 +133,7 @@ const shots = [
 		img_url: '/images/shot4.jpg',
 		price: '9.99',
 		calories: '450',
+		quantity: 1,
 		description:
 			'Chili-spiced sweet potatoes and roasted bell pepper and plenty of zing from fresh lime.',
 		nutrients: [
