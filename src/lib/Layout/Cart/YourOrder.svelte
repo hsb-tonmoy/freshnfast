@@ -4,7 +4,9 @@
 	import { shopping_bag } from '$lib/svg/header';
 	import Item from './Item.svelte';
 	import CheckoutForm from './CheckoutForm.svelte';
+	import NutritionModal from '$lib/Layout/Modal/NutritionModal.svelte';
 
+	let nutrition_hidden = true;
 	let isCheckout = false;
 
 	$: calories = $cart_items.reduce((acc, item) => acc + parseInt(item.calories) * item.quantity, 0);
@@ -14,6 +16,10 @@
 		$cart_items = [];
 	};
 </script>
+
+{#if !nutrition_hidden}
+	<NutritionModal bind:hidden={nutrition_hidden} />
+{/if}
 
 <section class="h-screen shadow-md bg-white px-16 py-20 z-[999999]">
 	<div class="header flex justify-center gap-x-6 pb-20 border-b-2 border-dashed border-gray-300">
@@ -70,7 +76,12 @@
 				<span class="text-sm font-medium">{calories} KCAL</span>
 			</div>
 			<div class="nutrition">
-				<button class="text-lightGreen hover:text-darkGreen">Nutrition Breakdown</button>
+				<button
+					on:click={() => {
+						nutrition_hidden = !nutrition_hidden;
+					}}
+					class="text-lightGreen hover:text-darkGreen">Nutrition Breakdown</button
+				>
 			</div>
 		</div>
 		<div class="total flex justify-between items-center pt-16">

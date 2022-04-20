@@ -3,14 +3,14 @@ const shots = [
 		title: 'Wake Me Up',
 		img_url: '/images/shot1.jpg',
 		price: '9.99',
-		calories: '450',
+		calories: '35',
 		quantity: 1,
 		description:
 			'Romaine lettuce, shredded parmesan, tomatoes and roasted chicken tossed with our caesar dressing.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '35'
 			},
 			{
 				name: 'Fat',
@@ -46,14 +46,14 @@ const shots = [
 		title: 'Immunity Shot',
 		img_url: '/images/shot2.jpg',
 		price: '9.99',
-		calories: '450',
+		calories: '42',
 		quantity: 1,
 		description:
 			'Baby spinach, grilled shrimp, tangerine slices, carrots, cranberries, slivered almonds and crispy wontons tossed with our asian vinaigrette.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '42'
 			},
 			{
 				name: 'Fat',
@@ -89,14 +89,14 @@ const shots = [
 		title: 'Detox Shot',
 		img_url: '/images/shot3.jpg',
 		price: '9.99',
-		calories: '450',
+		calories: '26',
 		quantity: 1,
 		description:
 			'lemon oregano chicken, rice, tomatoes, cucumber, olives, feta cheese, red onion, fresh herbs, and finished with tzatziki sauce.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '26'
 			},
 			{
 				name: 'Fat',
@@ -132,14 +132,14 @@ const shots = [
 		title: 'Hot Shot',
 		img_url: '/images/shot4.jpg',
 		price: '9.99',
-		calories: '450',
+		calories: '82',
 		quantity: 1,
 		description:
 			'Chili-spiced sweet potatoes and roasted bell pepper and plenty of zing from fresh lime.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '82'
 			},
 			{
 				name: 'Fat',

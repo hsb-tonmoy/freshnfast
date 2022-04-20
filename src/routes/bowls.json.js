@@ -3,14 +3,14 @@ const bowls = [
 		title: 'Bronco Bowl',
 		img_url: '/images/bowl1.jpg',
 		price: '9.99',
-		calories: '450',
+		calories: '650',
 		quantity: 1,
 		description:
 			'Romaine lettuce, shredded parmesan, tomatoes and roasted chicken tossed with our caesar dressing.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '650'
 			},
 			{
 				name: 'Fat',
@@ -53,7 +53,7 @@ const bowls = [
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '300'
 			},
 			{
 				name: 'Fat',
@@ -89,14 +89,14 @@ const bowls = [
 		title: 'Greek Freak',
 		img_url: '/images/bowl3.jpg',
 		price: '9.99',
-		calories: '350',
+		calories: '560',
 		quantity: 1,
 		description:
 			'lemon oregano chicken, rice, tomatoes, cucumber, olives, feta cheese, red onion, fresh herbs, and finished with tzatziki sauce.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '560'
 			},
 			{
 				name: 'Fat',
@@ -132,14 +132,14 @@ const bowls = [
 		title: 'Kale Yeah',
 		img_url: '/images/bowl4.jpg',
 		price: '9.99',
-		calories: '350',
+		calories: '420',
 		quantity: 1,
 		description:
 			'Chili-spiced sweet potatoes and roasted bell pepper and plenty of zing from fresh lime.',
 		nutrients: [
 			{
 				name: 'Calories',
-				value: '450'
+				value: '420'
 			},
 			{
 				name: 'Fat',

@@ -3,7 +3,13 @@
 	import { cart_items } from '$lib/Cart/stores';
 	import { spoon_fork, close } from '$lib/svg/home';
 	export let hidden = true;
-	export let items = [];
+
+	$: nutrients = $cart_items.reduce(
+		(acc, item) => acc + parseInt(item.calories) * item.quantity,
+		0
+	);
+
+	$: console.log(nutrients);
 </script>
 
 <div
@@ -12,7 +18,7 @@
 	id="defaultModal"
 	tabindex="-1"
 	aria-hidden="true"
-	class="flex justify-center items-center overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[10001] w-full md:inset-0 h-modal md:h-screen bg-white/90"
+	class="flex justify-center items-center overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[10001] w-full md:inset-0 h-modal md:h-screen bg-black/70"
 >
 	<div class="content-body relative w-full max-w-2xl h-full md:h-auto bg-white rounded-md">
 		<div
