@@ -2,7 +2,7 @@
 	<section class="bg-overlay" />
 	<div class="flex flex-col items-center z-10">
 		<h1
-			class="animate__animated animate__backInDown text-white text-6xl md:text-8xl lg:text-9xl font-playfair font-black"
+			class="animate__animated animate__backInDown text-white text-6xl md:text-8xl lg:text-9xl font-playfair font-black text-center"
 		>
 			Fresh N' Fast
 		</h1>

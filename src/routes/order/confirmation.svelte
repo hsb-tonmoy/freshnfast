@@ -1,8 +1,11 @@
 <script lang="ts">
-	import { cart_items } from '$lib/Cart/stores';
-	const uluru = { lat: 42.28160343514766, lng: -85.62355345906587 };
-	const options = { position: uluru };
 	import { GoogleMap } from '@beyonk/svelte-googlemaps';
+	import { cart_items } from '$lib/Cart/stores';
+
+	const freshnfast = { lat: 42.28160343514766, lng: -85.62355345906587 };
+	const options = { position: freshnfast };
+
+	let zoom_level = 15;
 
 	$: price = $cart_items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 	$: tax = price * 0.06;
@@ -13,8 +16,8 @@
 	<title>Fresh 'N Fast - Order Confirmed!</title>
 </svelte:head>
 
-<main class="flex h-screen">
-	<div class="sidebar flex flex-col w-[20%] px-12 overflow-y-auto py-6">
+<main class="flex flex-wrap h-screen">
+	<div class="sidebar flex flex-col w-full lg:w-[20%] px-12 overflow-y-auto py-6">
 		<div id="logo" class="self-center">
 			<a href="/">
 				<img
@@ -90,10 +93,10 @@
 		</div>
 	</div>
 
-	<div id="map" class="map w-[80%]">
+	<div id="map" class="map w-full lg:w-[80%]">
 		<GoogleMap
-			center={uluru}
-			zoom={15}
+			center={freshnfast}
+			bind:zoom={zoom_level}
 			{options}
 			apiKey="AIzaSyBatL5dWUxr4XMFqPUyEkoMWxa-rOVV5Qs"
 		/>

@@ -31,14 +31,14 @@
 	<title>Fresh 'N Fast - Cart</title>
 </svelte:head>
 
-<main class="flex">
-	<div class="content-body w-[75%] px-40">
+<main class="flex flex-wrap gap-y-16">
+	<div class="content-body w-full lg:w-[75%] px-12 lg:px-40">
 		<CartHeader />
-		<div class="main mt-20">
+		<div class="main mt-8 md:mt-20">
 			<CartBody {items} />
 		</div>
 	</div>
-	<div class="sidebar w-[25%]">
+	<div class="sidebar w-full lg:w-[25%]">
 		<YourOrder />
 	</div>
 </main>

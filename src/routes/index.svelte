@@ -23,6 +23,14 @@
 	export let bowls;
 	export let smoothies;
 	export let shots;
+
+	const bowls_description =
+		'Our salad bowls are are made with fresh and healthy ingredients. They are tasty and will satisfy all your nutrition goals in a very short time.';
+
+	const smoothies_description =
+		'Our smoothies not only look and taste delicious but they are also very healthy and contain no added sugar. Nothing is more refreshing after a heavy gym session.';
+	const shots_description =
+		'Our elixir shots are the perfect choice of drink after a fun nightout. They are made with ingredients that are heavy on electrolytes and will get you going in no time.';
 </script>
 
 <svelte:head>
@@ -31,17 +39,21 @@
 
 <main class="flex flex-col">
 	<Hero />
-	<WhiteSectionTemplate anchor="menu" heading="Our Bowls">
+	<WhiteSectionTemplate anchor="menu" heading="Our Bowls" description={bowls_description}>
 		<Bowls {bowls} />
 	</WhiteSectionTemplate>
 	<Discount />
 	<div class="mt-40">
-		<BackgroundSectionTemplate heading="Our Smoothies">
+		<BackgroundSectionTemplate
+			anchor="smoothies"
+			heading="Our Smoothies"
+			description={smoothies_description}
+		>
 			<Smoothies {smoothies} />
 		</BackgroundSectionTemplate>
 	</div>
 	<div class="">
-		<WhiteSectionTemplate heading="Elixir Shots">
+		<WhiteSectionTemplate anchor="shots" heading="Elixir Shots" description={shots_description}>
 			<Shots {shots} />
 		</WhiteSectionTemplate>
 	</div>

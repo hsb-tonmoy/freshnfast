@@ -6,9 +6,11 @@
 	export let heading = '';
 	export let description =
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedolorm reminusto doeiusmod tempor incidition ulla mco laboris nisi ut aliquip ex ea commo condorico consectetur adipiscing elitut aliquip.';
+	export let anchor = '';
 </script>
 
 <section
+	id={anchor}
 	class="flex flex-col relative items-center justify-center pt-24 pb-20 bg-cover bg-no-repeat bg-center bg-fixed bg-blend-darken"
 	style={`background-image: url(${section_bg})`}
 >
