@@ -5,16 +5,23 @@
 	export let hidden = true;
 	export let item = {};
 
-	function handleClick() {
-		for (let prod of $cart_items) {
-			if (prod.title === item.title) {
-				prod.quantity += 1;
+	const addToCart = (product) => {
+		for (let item of $cart_items) {
+			if (item.title === product.title) {
+				product.quantity += 1;
 				$cart_items = $cart_items;
+				return;
 			}
-			return;
 		}
-		$cart_items = [...$cart_items, item];
-	}
+		$cart_items = [...$cart_items, product];
+		hidden = true;
+		toast.push('Added to your order!', {
+			theme: {
+				'--toastBackground': '#48BB78',
+				'--toastBarBackground': '#2F855A'
+			}
+		});
+	};
 </script>
 
 <div
@@ -66,7 +73,7 @@
 		</div>
 		<div class="border-t border-dashed border-gray-300 py-6 text-center">
 			<button
-				on:click={handleClick}
+				on:click={() => addToCart(item)}
 				class="px-6 py-2 bg-lightGreen hover:bg-darkGreen text-white uppercase text-sm"
 				>Add to Order</button
 			>

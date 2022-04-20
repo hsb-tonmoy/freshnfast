@@ -12,7 +12,7 @@
 			Making Choices Healthier
 		</h3>
 		<a
-			href="/menu"
+			href="#menu"
 			class="animate__animated animate__slideInUp px-6 py-4 mt-12 overflow-hidden relative group cursor-pointer border-2 font-medium bg-white text-darkGreen"
 		>
 			<span

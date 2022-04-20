@@ -32,14 +32,22 @@
 		<span class="font-playfair text-3xl font-semibold">Your Orders</span>
 		<hr class="h-[5px] w-[18%] bg-lightGreen mt-2 mb-12" />
 		<div class="items flex flex-col gap-y-8 overflow-y-scroll">
-			{#each $cart_items as item}
-				<Item {item} />
-			{/each}
+			{#if $cart_items.length > 0}
+				{#each $cart_items as item}
+					<Item {item} />
+				{/each}
+			{:else}
+				<div class="flex justify-center items-center py-8">
+					<span class="font-playfair text-lg font-semibold"
+						>oops! You haven't added anything to your order yet!</span
+					>
+				</div>
+			{/if}
 		</div>
 	</div>
 	<div class="total flex justify-between items-center pt-14">
 		<span class="font-playfair font-semibold text-xl">Total Amount:</span>
-		<span class="text-lg">${total}</span>
+		<span class="text-lg">${Math.round(total * 100) / 100}</span>
 	</div>
 	<div class="checkout-button flex justify-center items-center pt-12">
 		<button
